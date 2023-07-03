@@ -1,0 +1,5 @@
+package com.yogesh.exception;
+
+public class DataExceptionHandler {
+
+}

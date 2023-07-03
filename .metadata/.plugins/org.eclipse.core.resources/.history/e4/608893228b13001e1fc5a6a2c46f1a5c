@@ -1,0 +1,70 @@
+package com.yogesh.model;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="bookingdb")
+public class Booking {
+	
+	
+	@Id
+	private int bookingId;
+	private String name;
+	private int age;
+	private String email;
+	private String phone;
+	private int seatNo;
+	public int getBookingId() {
+		return bookingId;
+	}
+	public void setBookingId(int bookingId) {
+		this.bookingId = bookingId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public int getSeatNo() {
+		return seatNo;
+	}
+	public void setSeatNo(int seatNo) {
+		this.seatNo = seatNo;
+	}
+	public Booking(int bookingId, String name, int age, String email, String phone, int seatNo) {
+		super();
+		this.bookingId = bookingId;
+		this.name = name;
+		this.age = age;
+		this.email = email;
+		this.phone = phone;
+		this.seatNo = seatNo;
+	}
+	public Booking() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+
+}

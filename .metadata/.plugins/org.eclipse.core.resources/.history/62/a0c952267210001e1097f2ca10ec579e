@@ -1,0 +1,9 @@
+package com.yogesh.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.yogesh.model.UserCredential;
+
+public interface UserCredentialRepository extends JpaRepository<UserCredential, Integer>{
+
+}

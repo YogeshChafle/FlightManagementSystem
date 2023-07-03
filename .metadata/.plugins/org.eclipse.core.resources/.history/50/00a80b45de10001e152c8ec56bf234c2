@@ -1,0 +1,17 @@
+package com.yogesh;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+@SpringBootApplication
+@EntityScan(basePackages = "com.yogesh")
+@EnableAutoConfiguration
+public class SecurityServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SecurityServiceApplication.class, args);
+	}
+
+}

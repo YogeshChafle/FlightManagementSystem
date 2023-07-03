@@ -1,0 +1,25 @@
+package com.yogesh.service;
+
+import org.apache.catalina.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import com.yogesh.model.UserCredential;
+import com.yogesh.repository.UserCredentialRepository;
+
+public class AuthService {
+	
+	@Autowired
+	UserCredentialRepository repository;
+	
+	@Autowired
+	PasswordEncoder passwordEncoder;
+	
+
+	public String saveUser(UserCredential user) {
+		((User) user).setPassword(passwordEncoder.encode(((User) user).getPassword()));
+		repository.save(user);
+		return "User has been added";
+	}
+
+}

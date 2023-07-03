@@ -1,0 +1,5 @@
+package com.yogesh.config;
+
+public class CustomUserDetails {
+
+}

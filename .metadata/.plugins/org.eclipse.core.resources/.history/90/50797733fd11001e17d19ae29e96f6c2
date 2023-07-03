@@ -1,0 +1,41 @@
+FlightSearch service ort = 8100
+Booking Service port = 8200
+payment service port = 8300
+security service port = 8400
+
+hystrix dependency added in pox to handle fallback error if any microservice is down
+cloud:
+    gateway:
+      routes:
+        - id: flightsearch-service
+          uri: lb://FLIGHTSEARCH-SERVICE
+          predicates:
+            - path=/flight/**
+          filters:
+          	- name: CircuitBreaker
+          	  args:
+          	  	name: flightsearch-service
+          	  	fallbackuri: forward:/flightsearchFallBack
+          	  	
+        - id: payment-service
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - path=/payment/**
+          filters:
+          	- name: CircuitBreaker
+          	  args:
+          	  	name: payment-service
+          	  	fallbackuri: forward:/paymentFallBack
+
+management:
+  endpoints:
+	web:
+	  exposure:
+		include: hystrix.stream
+hystrix:
+  command:
+	fallbackcmd:
+	  execution:
+	  	isolation:
+	  	  thread:
+	  	  	timeoutInMilliseconds: 5000    	  	

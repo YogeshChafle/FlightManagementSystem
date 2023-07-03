@@ -1,0 +1,50 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+
+                <div class="container text-center">
+                    <img src="../../../assets/logo.png" alt=""/>
+                </div>
+                    <h1 class="text-center">Register Here!</h1>
+                <!-- This line is use to show data on ui dynamically -->
+                    <!-- {{ user | json }} -->
+
+                <form (ngSubmit)="formSubmit()">
+                    <!-- username field -->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>User Name</mat-label>
+                        <input
+                        [(ngModel)]="user.username"
+                        name="username" 
+                        matInput placeholder="username">
+                      </mat-form-field>
+                    <!-- email field -->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input
+                        [(ngModel)]="user.email"
+                        name="email"
+                        matInput placeholder="email">
+                      </mat-form-field>
+                    <!-- password field -->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input
+                        [(ngModel)]="user.password"
+                        name="password"
+                        type="password" matInput placeholder="password">
+                      </mat-form-field>
+                    
+                    <!-- buttons below the form -->
+                    <div class="container text-center">
+                        <button  type="submit" mat-raised-button color="primary">Register</button>
+                        <button  style="margin-left:20px"  mat-raised-button color="accent">Clear</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

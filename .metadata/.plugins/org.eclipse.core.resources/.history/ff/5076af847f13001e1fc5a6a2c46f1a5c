@@ -1,0 +1,19 @@
+package com.yogesh.model;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
+public class Booking {
+	
+	
+	@Id
+	private int bookingId;
+	private String name;
+	private int age;
+	private String email;
+	private String phone;
+	private int seat;
+	
+
+}

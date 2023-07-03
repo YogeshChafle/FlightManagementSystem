@@ -1,0 +1,21 @@
+#spring:
+#  application:
+#    name: PAYMENT-SERVICE
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/paymentDB
+#    password: root
+#    username: root
+#  jpa:
+#    generate-ddl: true
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#        ddl-auto: update
+#    show-sql: true
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8200

@@ -1,0 +1,84 @@
+package com.yogesh.controller;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.yogesh.model.Booking;
+import com.yogesh.service.BookingService;
+
+
+/*
+ * @author Yogesh
+ * Booking service
+ */
+@RestController
+public class BookingController {
+	
+	/*
+	 * Autowireing of BookkingService
+	 */
+	@Autowired
+	private BookingService service;
+	
+	/*
+	 * This is post method for user to book their seat and need to add user data
+	 */
+	@PostMapping("/doBooking")
+	public Booking doBooking(@RequestBody Booking booking) {
+		return service.saveBooking(booking);
+	}
+	
+	/*
+	 * Access the booking information just by entering bookingId
+	 */
+	@GetMapping("/getBooking/{bookingId}")
+	public Optional<Booking> getBooking(@PathVariable("bookingId") int bookingId) {
+		return service.findById(bookingId);
+	}
+	
+//	@PutMapping("/updateBooking/{bookingId}")
+//	public String updateBooking(@RequestBody Booking booking, @PathVariable("bookingId") int bookingId) {
+//		return service.updateBoooking(booking, bookingId);;
+//	}
+	@PutMapping("/{bookingId}")
+    public ResponseEntity<String> updateBooking(
+            @PathVariable int bookingId,
+            @RequestBody BookingUpdateRequest bookingUpdateRequest
+    ) {
+        boolean isUpdated = bookingService.updateBooking(
+                bookingId,
+                bookingUpdateRequest.getName(),
+                bookingUpdateRequest.getAge(),
+                bookingUpdateRequest.getEmail(),
+                bookingUpdateRequest.getPhone(),
+                bookingUpdateRequest.getSeatNo()
+        );
+
+        if (isUpdated) {
+            return ResponseEntity.ok("Booking updated successfully.");
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+	
+	/*
+	 * This method is for cancelling booking that user made 
+	 */
+	@DeleteMapping("/cancelBooking/{bookingId}")
+	public String cancelBooking(@RequestBody Booking booking, @PathVariable("bookingId") int bookingId){
+		return service.cancelBooking(booking, bookingId);
+		
+	}
+	
+	
+
+}

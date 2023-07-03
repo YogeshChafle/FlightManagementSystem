@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\ASUS\OneDrive\Desktop\Yogesh\Flight Management System\jwt-youtube-master"/>
+			<item value="C:\Users\ASUS\Downloads\Flight-Management-system-main (1)\Flight-Management-system-main\FlightSearch"/>
+			<item value="C:\Users\ASUS\OneDrive\Desktop\Yogesh\Flight Management System\FMS-FlightSearch"/>
+			<item value="C:\Users\ASUS\OneDrive\Desktop\Yogesh\Flight Management System\TrainDetail"/>
+			<item value="C:\Users\ASUS\Downloads\FMS-FlightSearch (1)"/>
+			<item value="C:\Users\ASUS\OneDrive\Desktop\Yogesh\Flight Management System\FlightSearch"/>
+			<item value="C:\Users\ASUS\OneDrive\Desktop\Yogesh\Flight Management System\FMS-FlightSearchh"/>
+			<item value="C:\Users\ASUS\OneDrive\Desktop\Yogesh\Flight Management System\FMS-API-Gateway"/>
+			<item value="C:\Users\ASUS\OneDrive\Desktop\Yogesh\Flight Management System\Eureka_Server"/>
+			<item value="C:\Users\ASUS\OneDrive\Desktop\Yogesh\Flight Management System\ApiGateway"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\ASUS\OneDrive\Desktop\Yogesh\Flight Management System\FlightSearch\src\main\java\com\yogesh\FlightSearchApplication.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

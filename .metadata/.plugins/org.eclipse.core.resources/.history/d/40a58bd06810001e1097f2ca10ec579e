@@ -1,0 +1,5 @@
+package com.yogesh.service;
+
+public class JwtService {
+
+}

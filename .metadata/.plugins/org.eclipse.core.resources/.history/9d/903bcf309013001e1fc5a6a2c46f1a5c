@@ -1,0 +1,4 @@
+springdoc.swagger-ui.path=/swagger-ui.html
+springdoc.api-docs.path=/v3/api-docs
+springdoc.packages-to-scan=flightSearch
+springdoc.paths-to-match=/**

@@ -1,0 +1,37 @@
+package com.yogesh.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.yogesh.model.Booking;
+import com.yogesh.repository.BookingRepository;
+
+@Service
+public class BookingService {
+	
+	@Autowired
+	private BookingRepository repository;
+	
+	
+	public Booking saveBooking(Booking booking) {
+		return repository.save(booking);
+	}
+
+
+	
+
+	public Optional<Booking> findById(int bookingId) {
+		return repository.findById(bookingId);
+	}
+
+
+
+
+	public String cancelBooking(Booking booking, int bookingId) {
+		
+		return null;
+	}
+
+}

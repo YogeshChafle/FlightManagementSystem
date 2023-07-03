@@ -1,0 +1,5 @@
+package com.yogesh.model;
+
+public class UserCredential {
+
+}

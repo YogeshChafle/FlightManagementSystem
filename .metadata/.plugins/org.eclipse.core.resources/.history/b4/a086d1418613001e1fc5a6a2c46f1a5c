@@ -1,0 +1,76 @@
+package com.yogesh.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.yogesh.model.Booking;
+import com.yogesh.repository.BookingRepository;
+
+@Service
+public class BookingService {
+	
+	/*
+	 * Autowiring BookingRepository to connect to database
+	 */
+	@Autowired
+	private BookingRepository repository;
+	
+	
+	/*
+	 * This saves the data into db
+	 */
+	public Booking saveBooking(Booking booking) {
+		return repository.save(booking);
+	}
+
+
+	
+
+	public Optional<Booking> findById(int bookingId) {
+		return repository.findById(bookingId);
+	}
+
+
+
+	/*
+	 * Method for cancel booking by id
+	 */
+	public String cancelBooking(Booking booking, int bookingId) {
+		if(bookingId == booking.getBookingId()) {
+			repository.delete(booking);
+		}
+		return "Booking has been Cancel for ID_"+ booking.getBookingId();
+	}
+
+
+
+	/*
+	 * UpdateBooking is use to update the data enter by the user such as name, age, email, phoneNo etc
+	 */
+//	public String updateBoooking(Booking booking, int bookingId) {
+//		booking.setName(name);
+//		return null;
+//	}
+	public boolean updateBooking(int bookingId, String name, int age, String email, String phone, int seatNo) {
+        // Retrieve the existing booking data based on bookingId
+        Booking booking = getBookingById(bookingId);
+
+        if (booking != null) {
+            // Apply the updates
+            booking.setName(name);
+            booking.setAge(age);
+            booking.setEmail(email);
+            booking.setPhone(phone);
+            booking.setSeatNo(seatNo);
+
+            // Save the updated booking data
+            boolean isUpdated = saveBooking(booking);
+            return isUpdated;
+        }
+
+        return false; // Booking not found
+	
+	
+}
